@@ -11,6 +11,17 @@ function updateTime() {
     "h:mm:ss [<small>]A[</small>]"
   );
 
+  // Vostok
+  let vostokElement = document.querySelector("#vostok");
+  let vostokDateElement = vostokElement.querySelector(".date");
+  let vostokTimeElement = vostokElement.querySelector(".time");
+  let vostokTime = moment().tz("Antarctica/Vostok");
+
+  vostokDateElement.innerHTML = vostokTime.format("dddd Do MMMM");
+  vostokTimeElement.innerHTML = vostokTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+
   // Tokyo
 
   let tokyoElement = document.querySelector("#tokyo");
